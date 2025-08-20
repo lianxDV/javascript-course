@@ -257,6 +257,16 @@ Time for your first real coding challenge! This BMI calculator could be used in 
 
 **TEST DATA 2:** Mark weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall.
 
+let = can change variable but cannot redeclare
+const = permanent
+
+// Calculate BMIs
+// Create markHigherBMI
+// Log results
+// Log marks BMI
+// Log johns BMI
+// Log markHigherBMI
+
 **GOOD LUCK! 😀**
 
 ### Your Solution Space
