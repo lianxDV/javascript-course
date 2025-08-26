@@ -187,59 +187,122 @@
 // console.log("Mark has a higher BMI than John:", markHigherBMI);
 
 // String and Template Literals
-const firstName = "Jonas";
-const job = "teacher";
-const birthYear = 1991;
-const year = 2037;
 
-const jonas = 
-"I'm " + firstName + ", a" + (year - birthYear) + " years old " + job + "!";
-console.log(jonas);
+// LESSON 3:
 
-const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
-console.log(jonasNew);
+// const firstName = "Jonas";
+// const job = "teacher";
+// const birthYear = 1991;
+// const year = 2037;
 
-console.log(`I'm ${2037 - 1991} years old`);
-console.log(`Math works here: ${2 + 3} equals five`);
+// const jonas = 
+// "I'm " + firstName + ", a" + (year - birthYear) + " years old " + job + "!";
+// console.log(jonas);
+
+// const jonasNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+// console.log(jonasNew);
+
+// console.log(`I'm ${2037 - 1991} years old`);
+// console.log(`Math works here: ${2 + 3} equals five`);
 
 
-// if else statement
-const age = 15;
+// // if else statement
+// const age = 15;
 
-if (age >= 18) {
-  console.log("Sarah can start driving license");
+// if (age >= 18) {
+//   console.log("Sarah can start driving license");
+// } else {
+//     const yearsLeft = 18 - age;
+//     console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
+// }
+
+
+// console.log(Boolean(0)); //falsy value
+// console.log(Boolean(undefined)); //falsy value
+// console.log(Boolean("Jonas")); //truthy value
+// console.log(Boolean({})); //truthy value
+// console.log(Boolean("")); //falsy value
+
+// // Activity 2: BMI Comparison
+
+// ////////////////////////////////////
+// // Coding Challenge #2
+
+// // Reuse your BMI calculation from Challenge #1
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
+
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log(BMIMark, BMIJohn);
+
+
+
+// // Your if/else statement here:
+// if (BMIMark > BMIJohn) {
+//   console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+// } else {
+//   console.log(`John's BMI (${BMIJohn}) andis higher than Mark's (${BMIMark})!`);
+// }
+
+///
+
+// LESSON 4:
+
+
+// type conversion (manual)
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas")); 
+console.log(typeof NaN); 
+
+console.log(String(23), 23); 
+console.log(typeof String(23));
+
+console.log('I am ' +  23 + ' years old');
+console.log('23' - '10' - 3);
+console.log('23' * '2');
+console.log('23' / '2');
+
+let n = '1' + 1;
+console.log(n);
+
+// Equality - Strict
+
+const age = '18';
+if (age === 18) console.log("You just became an adult!");
+if (age == 18) console.log("You just became an adult! :D (loose)");
+
+console.log('18' === 18);
+console.log('18' == 18); // coercion happens
+console.log(18 === 18);
+
+// why == can be dangerous
+
+console.log(0 == false); // true
+console.log(0 === false); // false
+console.log(null == undefined); //special case
+
+console.log('' == false); // true
+console.log('' === false); // false
+
+// best practice
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // '23' == 23
+  console.log("Cool! 23 is an amazing number!");
+} else if (favourite === 7) {
+  console.log("7 is also a cool number!");
+} else if (favourite === 9) {
+  console.log("9 is also a cool number!");
 } else {
-    const yearsLeft = 18 - age;
-    console.log(`Sarah is too young. Wait another ${yearsLeft} years`);
+  console.log("Number is not cool!");
 }
 
-
-console.log(Boolean(0)); //falsy value
-console.log(Boolean(undefined)); //falsy value
-console.log(Boolean("Jonas")); //truthy value
-console.log(Boolean({})); //truthy value
-console.log(Boolean("")); //falsy value
-
-// Activity 2: BMI Comparison
-
-////////////////////////////////////
-// Coding Challenge #2
-
-// Reuse your BMI calculation from Challenge #1
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
-
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
-
-
-
-// Your if/else statement here:
-if (BMIMark > BMIJohn) {
-  console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
-} else {
-  console.log(`John's BMI (${BMIJohn}) andis higher than Mark's (${BMIMark})!`);
-}
+if (favourite !== 23) console.log("Why not 23?");
