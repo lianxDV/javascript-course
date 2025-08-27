@@ -252,57 +252,106 @@
 // LESSON 4:
 
 
-// type conversion (manual)
-const inputYear = "1991";
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
+// // type conversion (manual)
+// const inputYear = "1991";
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
 
-console.log(Number("Jonas")); 
-console.log(typeof NaN); 
+// console.log(Number("Jonas")); 
+// console.log(typeof NaN); 
 
-console.log(String(23), 23); 
-console.log(typeof String(23));
+// console.log(String(23), 23); 
+// console.log(typeof String(23));
 
-console.log('I am ' +  23 + ' years old');
-console.log('23' - '10' - 3);
-console.log('23' * '2');
-console.log('23' / '2');
+// console.log('I am ' +  23 + ' years old');
+// console.log('23' - '10' - 3);
+// console.log('23' * '2');
+// console.log('23' / '2');
 
-let n = '1' + 1;
-console.log(n);
+// let n = '1' + 1;
+// console.log(n);
 
-// Equality - Strict
+// // Equality - Strict
 
-const age = '18';
-if (age === 18) console.log("You just became an adult!");
-if (age == 18) console.log("You just became an adult! :D (loose)");
+// const age = '18';
+// if (age === 18) console.log("You just became an adult!");
+// if (age == 18) console.log("You just became an adult! :D (loose)");
 
-console.log('18' === 18);
-console.log('18' == 18); // coercion happens
-console.log(18 === 18);
+// console.log('18' === 18);
+// console.log('18' == 18); // coercion happens
+// console.log(18 === 18);
 
-// why == can be dangerous
+// // why == can be dangerous
 
-console.log(0 == false); // true
-console.log(0 === false); // false
-console.log(null == undefined); //special case
+// console.log(0 == false); // true
+// console.log(0 === false); // false
+// console.log(null == undefined); //special case
 
-console.log('' == false); // true
-console.log('' === false); // false
+// console.log('' == false); // true
+// console.log('' === false); // false
 
-// best practice
-const favourite = Number(prompt("What's your favourite number?"));
-console.log(favourite);
-console.log(typeof favourite);
+// // best practice
 
-if (favourite === 23) { // '23' == 23
-  console.log("Cool! 23 is an amazing number!");
-} else if (favourite === 7) {
-  console.log("7 is also a cool number!");
-} else if (favourite === 9) {
-  console.log("9 is also a cool number!");
-} else {
-  console.log("Number is not cool!");
-}
+// const favourite = Number(prompt("What's your favourite number?"));
+// console.log(favourite);
+// console.log(typeof favourite);
 
-if (favourite !== 23) console.log("Why not 23?");
+// if (favourite === 23) { // '23' == 23
+//   console.log("Cool! 23 is an amazing number!");
+// } else if (favourite === 23) {
+//   console.log("7 is also a cool number!");
+// } else if (favourite === 23) {
+//   console.log("9 is also a cool number!");
+// } else {
+//   console.log("Number is not cool!");
+// }
+
+// if (favourite !== 23) console.log("Why not 23?");
+
+// const hasDriversLicense = true; // A
+// const hasGoodVision = true; // B
+
+// console.log(`AND OPERATOR: ${hasDriversLicense && hasGoodVision}`);
+// console.log(`OR OPERATOR: ${hasDriversLicense || hasGoodVision}`);
+// console.log(`NOT OPERATOR: ${!hasDriversLicense}`);
+
+// const isTired = true; // C
+// console.log(hasDriversLicense && hasGoodVision && !isTired); 
+
+// if (hasDriversLicense && hasGoodVision && !isTired) {
+//   console.log(`Lia is able to drive!`);
+// } else {
+//   console.log(`Someone else should drive!`);
+// }
+
+
+// const age = 23;
+
+// const drink = age >= 18 ? "wine" : "water";
+// console.log(drink);
+
+// let drink2;
+// if (age >= 18) {
+//   drink2 = `wine`;
+// } else {
+//   drink2 = `water`;
+// }
+// console.log(drink2);
+
+// console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
+
+// Coding Challenge #4
+
+const bill = 275; // Test with 275, 40, and 430
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`);
+
+const bill2 = 40; // Test with 275, 40, and 430
+const tip1 = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`);
+
+const bill3 = 430;
+const tip2 = bill3 >= 50 && bill3 <= 300 ? bill3 * 0.15 : bill3 * 0.2;
+console.log(`The bill was ${bill3}, the tip was ${tip2}, and the total value ${bill3 + tip2}.`);
+
