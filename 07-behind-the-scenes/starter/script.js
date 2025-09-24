@@ -73,22 +73,68 @@
 
 // timer.start ();
 
-const functionTypes = {
-    regularFunction: function() {
-        console.log('Arguments length:', arguments.length);
-        console.log('First Arguments:', arguments[0]);
-    },
+// const functionTypes = {
+//     regularFunction: function() {
+//         console.log('Arguments length:', arguments.length);
+//         console.log('First Arguments:', arguments[0]);
+//     },
 
-    modernFunction: (...args) => {
-        console.log('Arguments length:', args.length);
-        console.log('First Arguments:', args[0]);
-    },
+//     modernFunction: (...args) => {
+//         console.log('Arguments length:', args.length);
+//         console.log('First Arguments:', args[0]);
+//     },
 
-    arrowFunction: () => {
-        console.log(arguments);
-        console.log('Arrow function called');
-    },
+//     arrowFunction: () => {
+//         console.log(arguments);
+//         console.log('Arrow function called');
+//     },
+// };
+
+// functionTypes.regularFunction('hello', 'world');
+// functionTypes.arrowFunction('hello', 'world');
+
+// let age = 30;
+
+// let oldAge = age;
+
+// age = 31;
+// console.log('age', age);
+// console.log('oldAge', oldAge);
+
+// const me = { name: 'Aiken', age: 25};
+
+// const friend = me;
+
+// friend.name = 'JohnDoe';
+// friend.age = 23;
+
+// console.log('me:', me);
+// console.log('friend:', friend);
+
+// const original = {
+//     name: 'Alice',
+//     age: 28,
+//     hobbies: ['reading', 'coding'],
+// };
+
+// const shallowCopy = {...original};
+// shallowCopy.name = 'Bob';
+
+// console.log('original name:', original.name);
+// console.log('copy name:', shallowCopy.name);
+
+
+const deepOriginal = {
+    name: 'Charlew',
+    age: 32,
+    address: {city: 'Paris', country: 'France'},
+    hobbies:['travel', 'photography'],
 };
 
-functionTypes.regularFunction('hello', 'world');
-functionTypes.arrowFunction('hello', 'world');
+const deepCopy = structuredClone(deepOriginal);
+deepCopy.address.city = 'London';
+deepCopy.hobbies.push = 'Cooking';
+deepCopy.name = 'Lex';
+
+console.log(deepOriginal);
+console.log(deepCopy);
